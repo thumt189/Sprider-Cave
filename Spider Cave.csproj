@@ -287,10 +287,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scipts\Collectables Scripts\DiamondScript.cs" />
+    <Compile Include="Assets\Scipts\Door Scripts\DoorScipt.cs" />
     <Compile Include="Assets\Scipts\Player Scripts\PlayerScript.cs" />
-    <Compile Include="Assets\Scipts\Spider Scripts\SpiderBullet.cs" />
-    <Compile Include="Assets\Scipts\Spider Scripts\SpiderJumper.cs" />
-    <Compile Include="Assets\Scipts\Spider Scripts\SpiderShooter.cs" />
+    <Compile Include="Assets\Scipts\Spider Scripts\BulletScript.cs" />
+    <Compile Include="Assets\Scipts\Spider Scripts\SpiderJumperScript.cs" />
+    <Compile Include="Assets\Scipts\Spider Scripts\SpiderShooterScript.cs" />
+    <Compile Include="Assets\Scipts\Spider Scripts\SpiderWalkerScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

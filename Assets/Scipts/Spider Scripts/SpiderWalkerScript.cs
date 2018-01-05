@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpiderWalkerScript : MonoBehaviour
 {
     [SerializeField]
-    private Transform startPos, endPos;
+    private Transform startPos, endPos = null;
 
     public bool is_collision;
 

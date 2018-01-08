@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour
     public float moveForce = 8f;
     public float jumpForce = 720f;
     public float maxVelocity = 5f;
+    public float minX;
 
     private Rigidbody2D myBody;
     private Animator anim;
@@ -25,7 +26,7 @@ public class PlayerScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-       
+        minX = -9.5f;
     }
 
     // Update is called once per frame
@@ -42,10 +43,12 @@ public class PlayerScript : MonoBehaviour
         float current_vel = Mathf.Abs(myBody.velocity.x);
         float h = Input.GetAxisRaw("Horizontal");
 
+
         if (h > 0)
         {
             if (current_vel < maxVelocity)
             {
+
                 if (grounded)
                 {
                     forceX = moveForce;
@@ -63,16 +66,24 @@ public class PlayerScript : MonoBehaviour
         }
         else if (h < 0)
         {
-            if (current_vel < maxVelocity)
+            if (myBody.position.x >= minX)
             {
-                if (grounded)
+                if (current_vel < maxVelocity)
                 {
-                    forceX = -moveForce;
+
+                    if (grounded)
+                    {
+                        forceX = -moveForce;
+                    }
+                    else
+                    {
+                        forceX = -moveForce * 1.1f;
+                    }
                 }
-                else
-                {
-                    forceX = -moveForce * 1.1f;
-                }
+            }
+            else
+            {
+                forceX = 0f;
             }
             Vector3 tmp = transform.localScale;
             tmp.x = -1f;

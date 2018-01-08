@@ -7,7 +7,7 @@ public class MainMenuCtrlScript : MonoBehaviour
 
     public void PlayGame()
     {
-        Application.LoadLevel(name: "LevelMenu");
+        Application.LoadLevel(name: "PlayGame");
     }
 
 }

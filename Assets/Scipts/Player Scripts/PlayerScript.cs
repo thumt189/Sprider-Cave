@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
 
     public float moveForce = 8f;
-    public float jumpForce = 700f;
-    public float maxVelocity = 4f;
+    public float jumpForce = 720f;
+    public float maxVelocity = 5f;
 
     private Rigidbody2D myBody;
     private Animator anim;
@@ -24,7 +25,7 @@ public class PlayerScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame

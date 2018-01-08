@@ -9,9 +9,15 @@ public class BulletScript : MonoBehaviour
         if (collision.tag == "Player")
         {
             // Khi đạn va chạm vào Player thì Player + Bullet biến mất
+            GameObject.Find("Game Play Controller").GetComponent<GameplayCtrlScript>().PlayerDied();
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
+        if (collision.tag == "Ground Walk")
+        {
+            Destroy(gameObject);
+        }
+
         if (collision.tag == "Ground")
         {
             Destroy(gameObject);

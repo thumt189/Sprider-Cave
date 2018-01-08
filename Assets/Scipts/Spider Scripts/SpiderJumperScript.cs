@@ -44,6 +44,7 @@ public class SpiderJumperScript : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            GameObject.Find("Game Play Controller").GetComponent<GameplayCtrlScript>().PlayerDied();
             Destroy(collision.gameObject);
         }
         if (collision.tag == "Ground")

@@ -31,6 +31,7 @@ public class SpiderShooterScript : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            GameObject.Find("Game Play Controller").GetComponent<GameplayCtrlScript>().PlayerDied();
             Destroy(collision.gameObject);
         }
     }

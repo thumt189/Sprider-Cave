@@ -6,7 +6,7 @@ public class LevelMenuCtrlScript : MonoBehaviour {
 
 	public void Level()
     {
-        Application.LoadLevel(name: "GamePlayer");
+        Application.LoadLevel(name: "PlayGame");
     }
 
     public void BackMenu()

@@ -26,7 +26,7 @@ public class SpiderWalkerScript : MonoBehaviour
     void ChangeDirection()
     {
         // Kiểm tra spider có va chạm với điểm đầu và điểm cuối layer ground.
-        is_collision = Physics2D.Linecast(startPos.position, endPos.position, 1 << LayerMask.NameToLayer("Ground"));
+        is_collision = Physics2D.Linecast(startPos.position, endPos.position, 1 << LayerMask.NameToLayer("Ground Walk"));
 
         // Vẽ đường kết lối giữa spider với gameobject end pos.
         Debug.DrawLine(startPos.position, endPos.position, Color.green);
@@ -66,6 +66,7 @@ public class SpiderWalkerScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            GameObject.Find("Game Play Controller").GetComponent<GameplayCtrlScript>().PlayerDied();
             Destroy(collision.gameObject);
         }
     }

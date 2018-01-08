@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 95902734385063498}
   - component: {fileID: 61226439225337270}
   - component: {fileID: 114473826645391980}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1757541619788082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 134, y: -3.89, z: 0}
+  m_LocalPosition: {x: 140, y: -3.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094c84f2b63b0d348b56e9816e2b6955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  msgWin: {fileID: 0}
   collectablesCount: 0
 --- !u!212 &212957515983501844
 SpriteRenderer:

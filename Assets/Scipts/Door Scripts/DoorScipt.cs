@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DoorScipt : MonoBehaviour
 {
 
     public static DoorScipt instance;
+
+    public Text msg;
 
     private Animator anim;
     private BoxCollider2D box;
@@ -31,7 +34,7 @@ public class DoorScipt : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        msg.text = "";
     }
 
     // Update is called once per frame
@@ -63,7 +66,8 @@ public class DoorScipt : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("Win");
+            msg.text = "You Win!";
+            GameObject.Find("Game Play Controller").GetComponent<GameplayCtrlScript>().PlayerDied();
         }
     }
 
